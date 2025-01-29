@@ -7,16 +7,19 @@
 /* body css to align items center i.e, calcualtor */
 body {
     background-color: rgb(254, 243, 243);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* hole calculator frame means model css */
 .frame {
-    height: 600px;
-    width: 450px;
+    height: auto;
+    max-width: 450px;
+    width: 95%;
     background-color: white;
     padding: 10px;
     box-shadow: 5px 5px 15px #68cdca, -5px -5px 10px #ffffff;
@@ -27,19 +30,19 @@ body {
 .heading {
     text-align: center;
     padding: 10px;
-    font-size: 25px;
+    font-size: clamp(20px, 5vw, 25px);
     margin-bottom: 9px;
 }
 
 /* input or calcy content display css */
 #display {
-    height: 85px;
     width: 100%;
     border: none;
     outline: none;
     background: transparent;
     box-shadow: 2px 2px 10px #68cdca, -5px -5px 10px #ffffff;
-    font-size: 30px;
+    height: clamp(60px, 12vw, 85px); 
+    font-size: clamp(20px, 5vw, 30px);
     box-sizing: border-box;
     padding: 10px;
     text-align: right;
@@ -50,17 +53,21 @@ body {
 .buttons-grp {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;    
+    gap: 10px;         
+    margin: 15px 0;
 }
 
 /* each btn css */
 .button {
-    height: 80px;
-    width: 80px;
+    height: clamp(50px, 15vw, 80px);    
+    width: clamp(50px, 15vw, 80px);
     border: none;
     outline: none;
     box-shadow: 5px 5px 10px #b6acac,-5px -5px 10px #fafaf4;
-    font-size: 25px;
-    margin-bottom: 30px;
+    font-size: clamp(18px, 4vw, 25px);
+    margin-bottom: 10px;
+    border-radius: 10px; 
 }
 
 /* on button press effect */
@@ -70,14 +77,14 @@ body {
 
 .button:hover {
     cursor: pointer;
-    background-color: red;
+    background-color: #FF6B6B;
     color: white;
 }
 
 /* operation btn color change */
 #operation {
     cursor: pointer;
-    background-color: red;
+    background-color: #FF6B6B;
     color: white;
 }
 
@@ -86,4 +93,18 @@ body {
     cursor: pointer;
     background-color: green;
     color: white;
+}  
+
+@media screen and (max-width: 400px) {
+    .frame {
+        padding: 10px;
+    }
+    
+    .buttons-grp {
+        gap: 5px;
+    }
+    
+    .button {
+        margin-bottom: 5px;
+    }
 }
