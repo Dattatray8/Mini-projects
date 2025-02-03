@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right , indigo,blue,skyblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box{
+    background-color: white;
+    padding: 50px;
+    box-shadow: 5px 5px 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+h2{
+    text-align: center;
+}
+
+#start{
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-left: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: green;
+    text-align: center;
+    transition: 0.5s all;
+    color: white;
+}
+
+#start:hover{
+    background-color: rgba(0, 128, 0, 0.668);
+}
+
+#stop{
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-left: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: red;
+    text-align: center;
+    color: white;
+    transition: 0.5s all;
+}
+
+#stop:hover{
+    background-color: rgba(255, 0, 0, 0.684);
+}
+
+#reset{
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-left: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    margin-right: 30px;
+    transition: 0.5s all;
+}
+
+#reset:hover{
+    background-color: rgba(0, 0, 255, 0.648);
+}
+
+/* New responsive rules */
+@media screen and (max-width: 768px) {
+    .box {
+      padding: 30px;
+      margin: 20px;
+      width: 90%;
+    }
+  
+    h1 {
+      font-size: 35px;
+    }
+  
+    h2 {
+      font-size: 25px;
+    }
+  
+    #start, #stop, #reset {
+      margin: 10px;
+      padding: 8px 15px;
+      font-size: 16px;
+      display: block;
+      width: 80%;
+    }
+  }
+  
+@media screen and (max-width: 480px) {
+    .box {
+      padding: 20px;
+
+    }
+  
+    h1 {
+      font-size: 28px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    #start, #stop, #reset {
+      margin: 8px auto;
+      font-size: 14px;
+      width: 90%;
+    }
+  }
