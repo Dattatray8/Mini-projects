@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div class="flex justify-center items-center h-[100vh] bg-[#1e1e2f] w-full">
+        <div
+            class="bg-[#2d2d44] sm:w-[70vw] md:w-[40vw] w-[90vw] text-[#ffffff] p-8 rounded-[0.75rem] shadow-[0_8px_16px_rgba(0,0,0,0.4)] flex flex-col gap-8">
+            <div class="bg-[#1e1e2f] justify-center flex items-center p-4">
+                <div class="w-[90%] flex justify-center text-[#00ffcc] text-[1.2rem] rounded-[6px]">
+                    <h1 id="pass">pawefli23</h1>
+                </div>
+                <div>
+                    <i class="fa-regular fa-copy text-[1.1rem] text-[#00c896] cursor-pointer" id="cpyBtn"></i>
+                </div>
+            </div>
+            <div class="w-full flex justify-between">
+                <input type="range" class="w-[90%]" name="range" id="range" min="6" max="15" value="10">
+                <p id="rangeVal"></p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <div>
+                    <input type="checkbox" name="upperCase" id="upperCase">
+                    <label for="upperCase">Uppercase Letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="lowerCase" id="lowerCase">
+                    <label for="lowerCase">Lowercase Letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="numbers" id="numbers">
+                    <label for="numbers">Numbers</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="symbol" id="symbol">
+                    <label for="symbol">Symbols</label>
+                </div>
+            </div>
+            <button id="btn"
+                class="bg-[#4a90e2] text-[#ffffff] cursor-pointer transition-[bg_0.3s_ease] text-[1rem] rounded-3xl px-6 py-3 hover:bg-[#357ab8]">Generate
+                Password</button>
+        </div>
+        <script src="index.js"></script>
+</body>
+
+</html> 
