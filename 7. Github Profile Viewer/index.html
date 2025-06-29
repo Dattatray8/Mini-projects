@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Github Profile Viewer</title>
+    <style>
+        .pImage {
+            object-fit: contain;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden flex flex-col justify-center items-center">
+    <header class="flex justify-center items-center w-full py-5 text-2xl font-bold text-[#181717]">
+        <p>Github Profile Viewer</p>
+    </header>
+    <section class="m-4 p-4 flex">
+        <div class="flex gap-2">
+            <input type="text" name="" id="uname" placeholder="Enter user name" class="border rounded-lg px-4">
+            <button class="bg-[#181717] text-white p-2 rounded-2xl cursor-pointer hover:bg-[#18171790]"
+                id="search">Search</button>
+        </div>
+    </section>
+    <main
+        class="m-auto mb-5 p-4 flex-col md:flex-row border justify-center items-center rounded-2xl w-[90%] md:[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] hidden"
+        id="card">
+        <div class="w-full flex flex-col gap-4 justify-center mb-5 md:mb-0">
+            <div class="rounded-[50%] w-[250px] h-[250px] pImage self-center" id="pimage"></div>
+            <div class="flex flex-col justify-center items-center gap-1">
+                <p class="text-xl font-bold" id="username"></p>
+                <p class="text-xl font-bold" id="bio"></p>
+            </div>
+        </div>
+        <div class="flex w-full flex-col gap-4 md:gap-8 justify-center items-center">
+            <div class="flex gap-5">
+                <div class="flex w-full flex-col justify-center items-center">
+                    <p>Followers</p>
+                    <p id="Followers"></p>
+                </div>
+                <div class="flex w-full flex-col justify-center items-center">
+                    <p>Following</p>
+                    <p id="Following"></p>
+                </div>
+                <div class="flex w-full flex-col justify-center items-center">
+                    <p>Repos</p>
+                    <p id="Repos"></p>
+                </div>
+            </div>
+            <button class="bg-[#181717] text-white p-2 rounded-2xl cursor-pointer hover:bg-[#18171790] w-full"
+                id="viewProfileBtn">View
+                Profile</button>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
