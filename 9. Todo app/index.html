@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>ToDo App</title>
+</head>
+<body class="overflow-x-hidden flex flex-col justify-center items-center gap-4">
+    <header class="flex justify-center items-center w-full py-4 text-2xl font-bold text-[#181717]">
+        <p>ToDo App</p>
+    </header>
+    <main class="m-2 w-[90%] flex flex-col justify-center items-center gap-5">
+        <section class="flex gap-2">
+            <input type="text" id="todo-input" placeholder="Add a new task" class="border rounded-lg px-4">
+            <button id="add-todo" class="bg-[#4CAF50] text-white p-2 rounded-xl cursor-pointer hover:bg-[#18171790]">Add</button>
+        </section>
+        <section id="tasks" class="m-2 w-[90%] md:[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] flex flex-wrap justify-center items-center gap-5">
+
+        </section>
+    </main>
+    <button id="clear" class="bg-[#ff0000] text-white p-2 rounded-lg cursor-pointer hover:bg-[#18171790]">Clear All tasks</button>
+    <script src="index.js"></script>
+</body>
+</html>
